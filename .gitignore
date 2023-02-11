@@ -4,6 +4,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Files used for testing
+code/temptest.ipynb
+
+
 # C extensions
 *.so
 
