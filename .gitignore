@@ -6,7 +6,7 @@ __pycache__/
 
 # Files used for testing
 code/temptest.ipynb
-
+data/
 
 # C extensions
 *.so
