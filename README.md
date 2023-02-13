@@ -9,7 +9,7 @@ by [**Anna Stein**](https://ansost.github.io)
 All source code used to generate the results and figures in this thesis are in the `code/` folder. 
 The calculations and figure generation are all run inside [Jupyter notebooks](http://jupyter.org/). 
 Since the Buckeye corpus licence does not permit derivatives of the corpus to be uploaded, I cannot upload the data that I used. 
-However, a copy of the Buckeye corpus is easily attainable on their [website](https://buckeyecorpus.osu.edu/php/speech.php).
+However, a copy of the Buckeye corpus is easily available on their [website](https://buckeyecorpus.osu.edu/php/speech.php).
 > Note that you need the zipped version of the corpus (that is the default) in order to use the [Buckeye package](https://github.com/scjs/buckeye) with the corpus.
 
 The code for this thesis is by no means the most efficient way to do things. However, it represents my coding journey and what I was able to do at the time. In the future I hope to add a 
