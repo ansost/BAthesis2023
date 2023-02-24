@@ -73,7 +73,7 @@ and produces it's output. To execute the whole notebook, run all cells in order.
     
 3.1 Create individual speaker event files with `eventfilesV1.ipynb`
     
-- Creates 40 individual event files and then concatenates them into on event file
+- Creates 40 individual event files and then concatenates them into one event file
 - The files are comma delimited and the index column is saved 
     
     *Input:* 'en_us_cmudict_forward.pt' & speaker word lists
@@ -112,8 +112,9 @@ and produces it's output. To execute the whole notebook, run all cells in order.
     
 ---    
     
-**6. Compute speech rate per utterance with `speech_rate.ipynb`**
-    
+**6. Compute speech rate per utterance with `speech_rate.ipynb`**  
+- Computes speech rate according to Pause boundaries marked in the buckeye corpus. 
+
     *Input:* Buckeye corpus
     
     *Output:* updated regression_data dataframe 
