@@ -7,6 +7,7 @@ __pycache__/
 # Files used for testing
 code/temptest.ipynb
 data/
+julia-testrun.ipynb
 
 # C extensions
 *.so
