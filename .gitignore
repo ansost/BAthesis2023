@@ -8,6 +8,7 @@ __pycache__/
 code/temptest.ipynb
 data/
 julia-testrun.ipynb
+BAthesis2023.Rproj
 
 # C extensions
 *.so
