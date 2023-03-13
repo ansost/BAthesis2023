@@ -70,6 +70,10 @@
   
 ---  
   
-**7. Statistical analysis**
-[...Yet to be uploaded] 
+**7. Statistical analysis with `regression_analysis.Rmd`**
+- Conducts the statistical analysis outlined in the Methods section of the thesis. 
+	- Data transformation and coding, model building, model criticism
+	
+	*Input:* regression_data.csv
+	*Output:* figures 
    
