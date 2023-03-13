@@ -38,7 +38,7 @@ jupyter notebook
 This will start the server and open your default web browser to the Jupyter interface. In the page, go into the `code` folder and select the notebook that you wish to view/run. The notebook is divided into cells (some have text while other have code). Each cell can be executed using `Shift + Enter`. Executing text cells does nothing and executing code cells runs the code and produces it's output. To execute the whole notebook, run all cells in order.
 
 ## Workflow
----
+
 Below is a short version of what you ened to do in order to recreate my workflow. All of these files are in the `/code`folder. A longer, more thourough version of the worklofw can be found in `docs/workflow.txt`. 
 
 The code for this thesis, especially the Python code, is by no means the most efficient way to do things. However, it represents my coding journey and what I was able to do at the time. In the future I hope to add a more concise and faster version of the current code. 
