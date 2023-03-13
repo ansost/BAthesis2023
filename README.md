@@ -30,17 +30,14 @@ pip install -r requirements.txt
 Dependencies for the R code are handled within the R-Markdown file. You have to install [pacman](https://www.rdocumentation.org/packages/pacman/versions/0.5.1) (code is provided) which automatically loads libraries or installs them if you dont have them already. 
 
 ## Reproducing the results
-
-One way of exploring the code results is to execute the Jupyter notebooks individually. To do this, you must first start the notebook server by going into the
-repository top level and running:
+You need to install both [Jupyter Notebook](https://jupyter.org/install) and [R Studio](https://posit.co/downloads/) in order to reproduce this analysis. Both softwares are available for free for all platforms. 
+You can start the jupyter notebook server by going into therepository top level and running:
 ```sh
 jupyter notebook
 ```
-Provided you have installed [Jupyter notebook](https://jupyter.org/install), this will start the server and open your default web browser to the Jupyter interface. In the page, go into the `code` folder and select the notebook that you wish to view/run.
+This will start the server and open your default web browser to the Jupyter interface. In the page, go into the `code` folder and select the notebook that you wish to view/run. The notebook is divided into cells (some have text while other have code). Each cell can be executed using `Shift + Enter`. Executing text cells does nothing and executing code cells runs the code and produces it's output. To execute the whole notebook, run all cells in order.
 
-The notebook is divided into cells (some have text while other have code). Each cell can be executed using `Shift + Enter`. Executing text cells does nothing and executing code cells runs the code and produces it's output. To execute the whole notebook, run all cells in order.
-
-### Workflow
+## Workflow
 ---
 Below is a short version of what you ened to do in order to recreate my workflow. All of these files are in the `/code`folder. A longer, more thourough version of the worklofw can be found in `docs/workflow.txt`. 
 
@@ -55,7 +52,6 @@ The code for this thesis, especially the Python code, is by no means the most ef
 7. Compute **speech rate** per utterance with `speech_rate.ipynb`.
 8. Do the **statistical analysis** with `regression_analysis.Rmd`
 
-
 ## License
 
 All source code is made available under a BSD 3-clause license. You can freely
@@ -66,4 +62,8 @@ The manuscript text is not open source. The author reserves the rights to the
 thesis content.
 
 ## Author
-[**Anna Stein**](https://ansost.github.io)
+**Anna Stein**
+
+Website: [https://ansost.github.io](https://ansost.github.io)
+
+If you are having problems with anything regarding this repository, please write me email: [anna.stein@hhu.de](mailto:anna.stein@hhu.de)
