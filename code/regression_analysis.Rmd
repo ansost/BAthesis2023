@@ -353,20 +353,6 @@ mFinal <- lmer(wordDur.Ms.log10 ~ (1|speakerID) + (1|wordID) +
 summary(mFinal)
 ```
 
-#### Check for correlation of predictors and duration
-```{r}
-actCont <- ggplot(data=df, aes(x=activation_context.z, y=wordDur.Ms.log10)) +
-  geom_smooth(method=lm, se = TRUE, color='red')
-pSyll <- ggplot(data=df, aes(x=prior_syllables.z, y=wordDur.Ms.log10)) +
-  geom_smooth(method=lm, se = TRUE, color='red')
-actSeg <- ggplot(data=df, aes(x=activation_segments.z, y=wordDur.Ms.log10)) +
-  geom_smooth(method=lm, se = TRUE, color='red')
-
-grid.arrange(actCont, pSyll, actSeg, nrow=3)
-
-ggsave(filename = 'actContCorr.png', device = 'png', path = '../figures')
-```
-
 # Model criticism
 
 ## Correlations
@@ -374,6 +360,28 @@ ggsave(filename = 'actContCorr.png', device = 'png', path = '../figures')
 predictor_df <- subset(df, select = c("activation_segments.z", "activation_syllables.z", "activation_context.z", "prior_context.z", "prior_syllables.z", "prior_segments.z"))
 pairscor.fnc(predictor_df, hist = FALSE)
 ```
+
+```{r}
+#Make a more readable plot for the pdf
+xlables <- c('activation-context', 'activation-segments', 'activation-syllables', 'prior-context', 'prior-segments', 'prior-syllables', 'word duration')
+
+cor_test <- cor_mat(predictor_df)
+df_corrs <- cor_test %>% gather(-rowname, key = cor_var, value = r)
+
+plot <- df_corrs %>% ggplot(aes(rowname, cor_var, fill = r)) + geom_tile() +
+ labs(x = 'variables', y = 'variables') +
+ scale_fill_gradient(low = 'light yellow', high = 'dark green') +
+ geom_text(aes(label = r)) + 
+ theme(axis.text.x = element_text(angle = 40, hjust=1, size = 15), 
+       axis.text.y = element_text(size=15))+
+  scale_x_discrete(labels= xlables)+
+  scale_y_discrete(labels=xlables)
+
+plot
+
+ggsave(plot = plot, filename = "Plots/corrmat.png", type = "cairo", dpi = 600)
+```
+![correlation matrix](../figures/corrmat.png "Correlation matrix of the NDL predictors and duration.")
 
 Comparison of pairs with rho > 0.5
 ```{r}
