@@ -2,9 +2,6 @@
 
 by [**Anna Stein**](https://ansost.github.io) 
 
-[2-3 sentence description of thesis]
-[figure of main results]
-
 ## Software implementation
 All source code used to generate the results and figures in this thesis are in the `code/` folder. 
 The calculations and figure generation are all run inside [Jupyter notebooks](http://jupyter.org/) for the Python code, and [R Markdown](https://rmarkdown.rstudio.com/) for the R code. 
